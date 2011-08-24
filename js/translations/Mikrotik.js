@@ -271,12 +271,12 @@ if(!dojo._hasResource["translations.Mikrotik"]){ //_hasResource checks added by 
             'nl_NL' : 'Engels',
             'id_ID' : 'Inggres'
         },
-        'CSIR Captive Portal' : {
-            'af_ZA' : 'CSIR Gehokte-portaal',
-            'fr_FR' : 'CSIR Captive Portal',
-            'ms_MY' : 'CSIR Captive Portal',
-            'nl_NL' : 'CSIR Captive Portal',
-            'id_ID' : 'CSIR Captive Portal'
+        'Captive Portal' : {
+            'af_ZA' : 'Gehokte-portaal',
+            'fr_FR' : 'Captive Portal',
+            'ms_MY' : 'Captive Portal',
+            'nl_NL' : 'Captive Portal',
+            'id_ID' : 'Captive Portal'
         },
 		'Welcome' : {
             'af_ZA' : 'Welkom',
