@@ -1,6 +1,11 @@
 <?
     $userurl   = $_REQUEST['userurl'];
     $reason    = $_REQUEST['reply'];
+
+    //If it failed here we need to wipe the cookie
+    setcookie("hs[username]",   "", time()-3600);
+    setcookie('hs[password]',   "", time()-3600);
+
 ?>
 <html>
  <head>
