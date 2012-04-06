@@ -1,0 +1,27 @@
+5-1-12
+This is the work-in-progress to create a mobile login page for CoovaChilli
+________________________________________________________________________________
+
+-> Ensure the following settings reflect your YFI server's IP Address (or DNS NAME)
+
+---------------------------------
+-- FILE: js/custom.js -----------
+---------------------------------
+    p_url_use:  'http://10.1.0.1/c2/yfi_cake/third_parties/json_usage_check?key=12345&username=',  //This is the YFi Web service which will show the user's usage
+    p_url_uam:  'http://10.1.0.1/mobile/uam.php?challenge=',    //This us the web service which will return a uam encrypted hash using the challenge, password and UAM shared secret
+    p_url_voucher_name: 'https://10.1.0.1/c2/yfi_cake/third_parties/json_voucher_name?key=12345&password=',
+
+_________________________________________________________________________________
+
+-> Ensure the shared secret in this file is the same as the one specified by the CoovaChilli program
+----------------------------------
+-- FILE: uam.php -----------------
+----------------------------------
+
+    $uamsecret = 'greatsecret';                         //Shared secret between chilli and uam json service
+
+_________________________________________________________________________________
+
+-> Point the 'UAM URL Format' in Coova Chilli to the mobile.php page
+If you extracted this file under /var/www then you would point it for instancew to
+http://10.1.0.1/mobile/mobile.php

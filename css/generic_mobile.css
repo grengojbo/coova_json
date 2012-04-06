@@ -1,0 +1,39 @@
+.center {
+    text-align:center;
+}
+
+.alternate-row {
+    background-color: #C0C0C0;
+}
+
+.slider_bg_green {
+	background: green;
+}
+
+.slider_bg_yellow {
+	background: yellow;
+}
+
+.slider_bg_red {
+	background: red;
+}
+
+.lbl_info {
+color:	#00FF00;
+
+}
+
+.col_right {
+    float:right; 
+    color:blue;
+}
+
+.info {
+    color: green;
+}
+
+.warn {
+    color: red;
+}
+
+

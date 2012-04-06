@@ -1,0 +1,29 @@
+Pages and their function:
+
+1.) about.php           -> The hotel/client's about page; pulled from the NAS-> REALM mapping info (json_login_info/nasid)
+2.) about_provider.php  -> The provider's about page; Where will this info come from? Will we make this a static page?
+3.) gallery.php         -> The gallery of photos also pulled from the NAS->REALM mapping info (json_login_info/nasid)
+4.) includes.php        -> Settings and general includes like footers and icons
+5.) mobile.php          -> The main page which will be called by CoovaChilli with a looong query string
+6.) register.php        -> The registration page displayed as a dialog in JQM
+7.) register_post.php   -> The POST target of the form in register.php 
+
+TODO:
+
+-> DONE! add Firstname, Lastname and e-mail addy to created user. 
+-> DONE! includes to include a settings array with various settings including:
+    -> realm name
+    -> realm
+    -> 3rd party user
+    -> 3rd party key
+    -> url_for_realm etc (different urls)
+    -> default_profile
+-> add an option on third party controller to e-mail user after they were created. (create a 3rd party web service)
+-> Login page..... Very important!!!
+
+TODO on Login page
+-> Done! Not submit empty username and password (on dummy)
+-> Done! Get URL settings for Coova's IP and Port
+-> Done! User URL manipulation
+-> Done! Settings for JS
+-> Test on live system
