@@ -27,9 +27,9 @@
 	                <h3>Who are we?</h3>
                      <div>
 			<p align='left'>
-                       	We are the biggest provider of Wi-Fi Hotspots to the hotel industry in the world.<br>
-			You can rest asure that this service you want to use has already been used by many people before you.<br>
-			We have more that 10 years solid experience of provinding Wi-Fi Hotspots.
+			We are the biggest provider of Wi-Fi Hotspots to the hotel industry in the world.<br>
+			You can rest assure that this service you want to use has already been used by many people before you.<br>
+			We have more than 10 year’s solid experience of providing Wi-Fi Hotspots.
 			</p>
                     </div>
                 </div> 
