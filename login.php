@@ -5,6 +5,8 @@
 	$password   = $_POST['password'];
 	$challenge  = $_POST['challenge'];
 	$redir	    = $_POST['userurl'];
+    $server_ip  = $_POST['uamip'];
+    $port       = $_POST['uamport'];
 
     //--Add a remember me cookie---
     if( array_key_exists('remember',$_POST)){
@@ -23,8 +25,6 @@
     }
 
 	$enc_pwd    = return_new_pwd($password,$challenge,$uamsecret);
-	$server_ip 	= '10.1.0.1';
-	$port		= '3990';
 	//$dir		= '/json/logon';
 	$dir		= '/logon';
     $target     = "http://$server_ip".':'.$port.$dir."?username=$username&password=$enc_pwd&userurl=$redir";

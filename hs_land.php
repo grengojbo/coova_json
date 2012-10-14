@@ -4,6 +4,9 @@
 	$res	   = $_REQUEST['res'];
 	$qs        = $_SERVER["QUERY_STRING"];
 
+    $uamip     = $_POST['uamip'];
+    $uamport   = $_POST['uamport'];
+
 
     //--There is a bug that keeps the logout in a loop if userurl is http%3a%2f%2f1.0.0.0 ---/
     //--We need to remove this and replace it with something we want
@@ -33,17 +36,14 @@
         if(isset($_COOKIE['hs'])){
 
                 $uamsecret  = 'greatsecret';
-                $server_ip  = '10.1.0.1';
-                $port       = '3990';
                 $dir        = '/logon';
-
                 $userurl    = $_REQUEST['userurl'];
                 $redir      = urlencode($userurl);
 
                 $username   = $_COOKIE['hs']['username'];
                 $password   = $_COOKIE['hs']['password'];
                 $enc_pwd    = return_new_pwd($password,$challenge,$uamsecret);
-                $target     = "http://$server_ip".':'.$port.$dir."?username=$username&password=$enc_pwd&userurl=$redir";
+                $target     = "http://$uamip".':'.$uamport.$dir."?username=$username&password=$enc_pwd&userurl=$redir";
                 header("Location: $target");
                 print("\n</html>");
         }
@@ -91,6 +91,9 @@
             <img src="img/logo.jpg" alt="Logo" class='spaced' />
                 <!-- FORM TO LOG IN -->
             <form name="login" action="login.php" method="post">
+                <input type="hidden" name="uamip" value="<? echo($uamip) ?>" />
+                <input type="hidden" name="uamport" value="<? echo($uamport) ?>" />
+
                 <input type="hidden" name="challenge" value="<? echo($challenge) ?>" />
                 <input type="hidden" name="userurl" value="<? echo(urlencode($userurl)) ?>" />
 
