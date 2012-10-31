@@ -7,6 +7,9 @@
     }else{
         $nasid = 'Residence';
     }  
+
+    //Manual override
+    $nasid='localhost';
     
     //Set a session variable containing the nasid
     session_start();

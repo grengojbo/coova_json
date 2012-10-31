@@ -12,7 +12,7 @@
     $settings['3rd_cap']                = 'hard';               //The cap the permanent user will be created with (hard/soft/pre-paid)
     
     $settings['nas_url_info']           = 'http://127.0.0.1/c2/yfi_cake/login_pages/json_login_info/';  //Info on the NAS
-    $settings['url_image_scaler']       = '/c2/yfi_cake/files/image.php';  //Info on the NAS
+    $settings['url_image_scaler']       = '/c2/yfi_cake/webroot/files/image.php';  //Info on the NAS
 
     $settings['url_nas_list']           = 'http://127.0.0.1/c2/yfi_cake/nas/json_nas_map_public/full';  //List of NAS devices and their status
 

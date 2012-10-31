@@ -4,8 +4,8 @@
 	$res	   = $_REQUEST['res'];
 	$qs        = $_SERVER["QUERY_STRING"];
 
-    $uamip     = $_POST['uamip'];
-    $uamport   = $_POST['uamport'];
+    $uamip     = $_REQUEST['uamip'];
+    $uamport   = $_REQUEST['uamport'];
 
 
     //--There is a bug that keeps the logout in a loop if userurl is http%3a%2f%2f1.0.0.0 ---/
