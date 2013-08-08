@@ -15,7 +15,7 @@
     $realm  = 'OceanPLaza';
 
     $hotspot_portal = "http://127.0.0.1";
-    $default_site = 'oceanplaza.com.ua';
+    $default_site = 'http://oceanplaza.com.ua';
     $uamsecret  = 'greatsecret';
 
     $gen_voucher = $hotspot_portal."/c2/yfi_cake/third_parties/json_create_voucher/?".
@@ -42,7 +42,7 @@
         $pattern = "/1\.0\.0\.0/i";
         $userurl = preg_replace($pattern, $default_site, $userurl);
     }
-    $userurl = $default_site;
+    // $userurl = $default_site;
     //---------------------------------------------------------
 
 	if($res == 'success'){
