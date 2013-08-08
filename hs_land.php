@@ -7,11 +7,38 @@
     $uamip     = $_REQUEST['uamip'];
     $uamport   = $_REQUEST['uamport'];
 
+    $key    = '123456789';
+    $value  = '1-00-00-00';
+    $profile= 'Test5min';
+    $expires= '2010-07-01';
+    $precede= 'sms';
+    $realm  = 'OceanPLaza';
+
+    $hotspot_portal = "http://127.0.0.1";
+    $default_site = 'oceanplaza.com.ua';
+    $uamsecret  = 'greatsecret';
+
+    $gen_voucher = $hotspot_portal."/c2/yfi_cake/third_parties/json_create_voucher/?".
+                    "key=".$key.'&voucher_value='.$value.'&profile='.urlencode($profile).'&realm='.urlencode($realm);
+                    #"key=".$key.'&voucher_value='.$value.'&profile='.urlencode($profile).'&expires='.$expires.'&precede='.$precede.'&realm='.urlencode($realm);
+
+    $fb = exec("wget -q -O - '".$gen_voucher."'");
+    //--- Sanitize the feedback a bit ------
+    $fb = preg_replace("/^\(/","",$fb);
+    $fb = preg_replace("/\)/","",$fb);
+    $fb = preg_replace("/;/","",$fb);
+    $json_array = json_decode($fb,true);
+
+    if($json_array['json']['status'] == 'ok'){
+        // echo "<b>Voucher id </b>".$json_array['voucher']['id']."<br>\n";
+        // echo "<b>Voucher username </b>".$json_array['voucher']['username']."<br>\n";
+        // echo "<b>Voucher password </b>".$json_array['voucher']['password']."<br>\n";
+    }
+
 
     //--There is a bug that keeps the logout in a loop if userurl is http%3a%2f%2f1.0.0.0 ---/
     //--We need to remove this and replace it with something we want
     if (preg_match("/1\.0\.0\.0/i", $userurl)) {
-        $default_site = 'google.com';
         $pattern = "/1\.0\.0\.0/i";
         $userurl = preg_replace($pattern, $default_site, $userurl);
     }
@@ -35,7 +62,6 @@
 
         if(isset($_COOKIE['hs'])){
 
-                $uamsecret  = 'greatsecret';
                 $dir        = '/logon';
                 $userurl    = $_REQUEST['userurl'];
                 $redir      = urlencode($userurl);
@@ -96,10 +122,10 @@
 
                 <input type="hidden" name="challenge" value="<? echo($challenge) ?>" />
                 <input type="hidden" name="userurl" value="<? echo(urlencode($userurl)) ?>" />
-
-                <label for="username" id='l_username'>Username</label> <input class="input" name="username" type="text"/>
+                <input type="hidden" name="password" value="<? echo($json_array['voucher']['password']) ?>">
+                <label for="username" id='l_username'>Username</label> <input class="input" name="username" type="text" value="<? echo($json_array['voucher']['username']) ?>"/>
                 <br />
-                <label for="password" id='l_password'>Password </label> <input class="input" name="password" type="password"/>
+                <!--<label for="password" id='l_password'>Password </label> <input class="input" name="password-old" type="password"/>-->
                 <br />
                 <label for="language" id='l_language'>Language </label> <select id='sel_lang' class="input" onchange="changeLanguage();">
                                                             <option value='en' selected='selected' label='English'>English</option>
