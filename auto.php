@@ -15,6 +15,7 @@
     $realm  = 'OceanPLaza';
 
     $hotspot_portal = "http://127.0.0.1";
+    $default_site = urlencode('http://oceanplaza.com.ua');
     $default_site = 'http://oceanplaza.com.ua';
     $uamsecret  = 'greatsecret';
 
@@ -38,6 +39,7 @@
 
     //--There is a bug that keeps the logout in a loop if userurl is http%3a%2f%2f1.0.0.0 ---/
     //--We need to remove this and replace it with something we want
+    $userurl = $default_site;
     if (preg_match("/1\.0\.0\.0/i", $userurl)) {
         $pattern = "/1\.0\.0\.0/i";
         $userurl = preg_replace($pattern, $default_site, $userurl);
@@ -109,7 +111,7 @@ function submitInternet(){
 }
 
 function submitADS(){
-    document.forms[0].userurl.value = "http://089.com.ua";
+    document.forms[0].userurl.value = "<? echo(urlencode($userurl)) ?>";
     document.forms[0].buttonClicked.value = 4;
     document.forms[0].submit();
 }
