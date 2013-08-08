@@ -9,13 +9,14 @@
 
     $key    = '123456789';
     $value  = '1-00-00-00';
-    $profile= 'Test5min';
+    $profile= 'Free30min';
+    // $profile= 'Test5min';
     $expires= '2010-07-01';
     $precede= 'sms';
     $realm  = 'OceanPLaza';
 
     $hotspot_portal = "http://127.0.0.1";
-    $default_site = urlencode('http://oceanplaza.com.ua');
+    // $default_site = urlencode('http://oceanplaza.com.ua');
     $default_site = 'http://oceanplaza.com.ua';
     $uamsecret  = 'greatsecret';
 
