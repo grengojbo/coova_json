@@ -196,12 +196,12 @@ function loadAction(){
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
 
 <div class="pure-g-r" id="layout">
-<div class="pure-u-1 visible-phone" id="main-phone">
-  <a onclick="submitADS();"><img src="static/img/t32x40.jpg"></a>
+<div class="pure-u-1 visible-tablet visible-phone" id="main-phone">
+  <a onclick="submitADS();"><img src="static/img/bbm320x350.gif"></a>
 </div>
-<div class="pure-u-1 visible-tablet" id="main-tablet">
-  <a onclick="submitADS();"><img src="static/img/c768x960.jpg"></a>
-</div>
+<!--<div class="pure-u-1" id="main-tablet">
+  
+</div>-->
 <div class="pure-u-1 visible-desktop" id="main-desktop">
   <a onclick="submitADS();"><img src="static/img/r.jpg"></a>
 </div>
