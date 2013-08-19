@@ -196,12 +196,12 @@ function loadAction(){
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
 
 <div class="pure-g-r" id="layout">
-<div class="pure-u-1 visible-tablet visible-phone" id="main-phone">
+<div class="pure-u-1 visible-phone" id="main-phone">
   <a onclick="submitADS();"><img src="static/img/bbm320x350.gif"></a>
 </div>
-<!--<div class="pure-u-1" id="main-tablet">
-  
-</div>-->
+<div class="pure-u-1 visible-tablet" id="main-tablet">
+  <a onclick="submitADS();"><img src="static/img/bbm320x350.gif"></a>
+</div>
 <div class="pure-u-1 visible-desktop" id="main-desktop">
   <a onclick="submitADS();"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="960" height="450" id="960x450_BBMedia" align="middle">
                                 <param name="movie" value="static/flash/bbm960x450.swf" />
