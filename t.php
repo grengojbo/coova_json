@@ -1,12 +1,12 @@
 <?
   
-  /*ini_set('error_reporting', E_ALL);
+  ini_set('error_reporting', E_ALL);
   error_reporting(E_ALL);
   ini_set('log_errors',TRUE);
   ini_set('html_errors',FALSE);
   ini_set('error_log','/var/log/chilli.log');
   ini_set('display_errors',FALSE);
-  */
+  
 	$challenge = $_REQUEST['challenge'];
 	$userurl   = $_REQUEST['userurl'];
 	$res	   = $_REQUEST['res'];
