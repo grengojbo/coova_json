@@ -47,7 +47,7 @@
 
     //--There is a bug that keeps the logout in a loop if userurl is http%3a%2f%2f1.0.0.0 ---/
     //--We need to remove this and replace it with something we want
-    //$userurl = $default_site;
+    $userurl = $default_site;
     //if (preg_match("/10\.1\.0\.1\/coova_json\/:\/\//i", $userurl)) {
     //    $dsite = '';
     //    $pattern = "/10\.1\.0\.1\/coova_json\/:\/\//i";
