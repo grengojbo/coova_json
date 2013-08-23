@@ -57,7 +57,11 @@
     //---------------------------------------------------------
 
 	if($res == 'success'){
-
+    if (preg_match("/10\.1\.0\.1\/coova_json\/:\/\//i", $userurl)) {
+        $dsite = '';
+        $pattern = "/10\.1\.0\.1\/coova_json\/:\/\//i";
+        $userurl = preg_replace($pattern, $dsite, $userurl);
+    }
 		header("Location: $userurl");
 		print("\n</html>");
 	}
