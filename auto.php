@@ -1,4 +1,11 @@
 <?
+  
+  ini_set('error_reporting', E_ALL);
+  error_reporting(E_ALL);
+  ini_set('log_errors',TRUE);
+  ini_set('html_errors',FALSE);
+  ini_set('error_log','/var/log/chilli.log');
+  ini_set('display_errors',FALSE);
 	$challenge = $_REQUEST['challenge'];
 	$userurl   = $_REQUEST['userurl'];
 	$res	   = $_REQUEST['res'];
@@ -23,7 +30,7 @@
     $gen_voucher = $hotspot_portal."/c2/yfi_cake/third_parties/json_create_voucher/?".
                     "key=".$key.'&voucher_value='.$value.'&profile='.urlencode($profile).'&realm='.urlencode($realm);
                     #"key=".$key.'&voucher_value='.$value.'&profile='.urlencode($profile).'&expires='.$expires.'&precede='.$precede.'&realm='.urlencode($realm);
-
+    error_log(print_r('"wget -q -O - '".$gen_voucher."'"', TRUE));
     $fb = exec("wget -q -O - '".$gen_voucher."'");
     //--- Sanitize the feedback a bit ------
     $fb = preg_replace("/^\(/","",$fb);
@@ -200,7 +207,7 @@ function loadAction(){
   <a onclick="submitADS();"><img src="static/img/bbm320x350.gif"></a>
 </div>
 <div class="pure-u-1 visible-tablet" id="main-tablet">
-  <a onclick="submitADS();"><img src="static/img/bbm320x350.gif"></a>
+  <a onclick="submitADS();"><img src="static/img/bbm768x840.jpg"></a>
 </div>
 <div class="pure-u-1 visible-desktop" id="main-desktop">
   <a onclick="submitADS();"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="960" height="450" id="960x450_BBMedia" align="middle">

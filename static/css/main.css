@@ -18,14 +18,17 @@ body {
 .visible-desktop {
   display: inherit !important;
 }
+.pure-button {
+	height: 44px;
+}
 
 @media (min-width: 769px){
  .pure-g-r img {
-	width: 480px;
+	width: 960px;
 	height: auto;
   }
   .pure-button {
-  	width: 480px;
+  	width: 960px;
   }
   .visible-phone {
 	display: none !important;
