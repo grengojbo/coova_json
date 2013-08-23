@@ -75,7 +75,7 @@
 	}
 
     //-- cookie add on -------------------------------
-    /*if($res == 'notyet'){
+    if($res == 'notyet'){
 
         if(isset($_COOKIE['hs'])){
 
@@ -100,7 +100,7 @@
             $password   = implode ('', unpack('H32', ($newpwd ^ $newchal))); //unpack again
             return $password;
     }
-*/
+
     //-- End Cookie add on ------------
 
 ?>
