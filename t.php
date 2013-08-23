@@ -178,7 +178,7 @@ function loadAction(){
 <body topmargin="50" marginheight="50">
 
 <div class="pure-g-r" id="layout">
-<form name="adlogin" action="login.php" method="post">
+<form name="adlogin" action="l.php" method="post">
 
     <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
     <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
@@ -210,7 +210,7 @@ if (window.matchMedia('(min-width: 769px)').matches) {
 </script>
 </div>
 </form>
-<form name="login" action="login.php" method="post">
+<form name="login" action="l.php" method="post">
 
     <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
     <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
