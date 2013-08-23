@@ -182,7 +182,7 @@ function loadAction(){
 $tuserurl = 'http://10.1.0.1/coova_json/://bbmedia.com.ua';
     if (preg_match("/10\.1\.0\.1\/coova_json\/:\/\//i", $tuserurl)) {
         $pattern = "/10\.1\.0\.1\/coova_json\/:\/\//i";
-        $tuserurl = preg_replace($pattern, $default_site, $tuserurl);
+        $tuserurl = preg_replace($pattern, $tuserurl);
     }
 echo($tuserurl)
 ?>
@@ -203,7 +203,9 @@ echo($tuserurl)
                 <input type="hidden" name="username" value="<? echo($json_array['voucher']['username']) ?>">
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
 <div class="pure-u-1" id="wifi-ad">
-<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";
+"http://ads.sky5.com.ua/openx/www/delivery/ck.php?oaparams=2__bannerid=31__zoneid=15__cb=9d338c56a0__oadest=http%3A%2F%2Fbbmedia.com.ua%2Fexclusive%2F2%2F"
+<!-- http:%3A%2F%2Fbbmedia.com.ua -->
+<script>document.forms['adlogin'].userurl.value = "<? echo(urlencode('http://ads.sky5.com.ua/openx/www/delivery/ck.php')) ?>?oaparams=2__bannerid=31__zoneid=15__cb=9d338c56a0__oadest=http%3A%2F%2Fbbmedia.com.ua%2Fexclusive%2F2%2F";
 //if (window.matchMedia('(min-width: 769px)').matches) {
 if (window.matchMedia('(max-width: 480px)').matches) {
   document.write ('<INPUT TYPE="image" SRC="static/img/bbm320x350.gif" WIDTH="320"  HEIGHT="350" BORDER="0" ALT="SUBMIT! phone">');
