@@ -94,6 +94,16 @@
             $response   = md5("\0" . $pwd . $newchal);              //md5 the lot
             $newpwd     = pack('a32', $pwd);                //pack again
             $password   = implode ('', unpack('H32', ($newpwd ^ $newchal))); //unpack again
+            print_r("pwd: ".$pwd);
+            print_r("challenge: ".$challenge);
+            print_r("uamsecret: ".$uamsecret);
+            print_r("hex_chal: ".$hex_chal);
+            print_r("newchal: ".$newchal);
+            print_r("response: ".$response);
+            print_r("newpwd: ".$newpwd);
+
+            print_r("password: ".$password);
+            print_r("--------------------------------");
             return $password;
     }
 
