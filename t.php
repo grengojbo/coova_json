@@ -200,13 +200,13 @@ function loadAction(){
 if (window.matchMedia('(max-width: 480px)').matches) {
   document.write ('<INPUT TYPE="image" SRC="static/img/bbm320x350.gif" WIDTH="320"  HEIGHT="350" BORDER="0" ALT="SUBMIT! phone">');
 }
-if (window.matchMedia('(min-width: 769px)').matches) {
-//if (window.matchMedia('(max-width: 768px)').matches) {
+//if (window.matchMedia('(min-width: 769px)').matches) {
+if (window.matchMedia('(max-width: 768px)').matches) {
   document.write ('<INPUT TYPE="image" SRC="static/img/bbm768x840.jpg" WIDTH="768"  HEIGHT="840" BORDER="0" ALT="SUBMIT! table">');
 }
-//if (window.matchMedia('(min-width: 769px)').matches) {
-//  document.write ('<INPUT TYPE="image" SRC="static/img/bbm960x450.jpg" WIDTH="960"  HEIGHT="450" BORDER="0" ALT="SUBMIT! desctop">');
-//}
+if (window.matchMedia('(min-width: 769px)').matches) {
+  document.write ('<INPUT TYPE="image" SRC="static/img/bbm960x450.jpg" WIDTH="960"  HEIGHT="450" BORDER="0" ALT="SUBMIT! desctop">');
+}
 </script>
 </div>
 </form>

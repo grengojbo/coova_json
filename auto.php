@@ -203,17 +203,20 @@ function loadAction(){
     <input type="hidden" name="password" value="<? echo($json_array['voucher']['password']) ?>">
     <input type="hidden" name="username" value="<? echo($json_array['voucher']['username']) ?>">
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
-<div class="pure-u-1 visible-phone" id="main-phone">
-<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
-  <INPUT TYPE="image" SRC="static/img/bbm320x350.gif" WIDTH="320"  HEIGHT="350" BORDER="0" ALT="SUBMIT!">
-</div>
-<div class="pure-u-1 visible-tablet" id="main-tablet">
-<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
-<INPUT TYPE="image" SRC="static/img/bbm768x840.jpg" WIDTH="768"  HEIGHT="840" BORDER="0" ALT="SUBMIT!">
-</div>
-<div class="pure-u-1 visible-desktop" id="main-desktop">
-<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
-<INPUT TYPE="image" SRC="static/img/bbm960x450.jpg" WIDTH="960"  HEIGHT="450" BORDER="0" ALT="SUBMIT!">
+<div class="pure-u-1" id="wifi-ad">
+<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";
+//if (window.matchMedia('(min-width: 769px)').matches) {
+if (window.matchMedia('(max-width: 480px)').matches) {
+  document.write ('<INPUT TYPE="image" SRC="static/img/bbm320x350.gif" WIDTH="320"  HEIGHT="350" BORDER="0" ALT="SUBMIT! phone">');
+}
+//if (window.matchMedia('(min-width: 769px)').matches) {
+if (window.matchMedia('(max-width: 768px)').matches) {
+  document.write ('<INPUT TYPE="image" SRC="static/img/bbm768x840.jpg" WIDTH="768"  HEIGHT="840" BORDER="0" ALT="SUBMIT! table">');
+}
+if (window.matchMedia('(min-width: 769px)').matches) {
+  document.write ('<INPUT TYPE="image" SRC="static/img/bbm960x450.jpg" WIDTH="960"  HEIGHT="450" BORDER="0" ALT="SUBMIT! desctop">');
+}
+</script>
 </div>
 </form>
 <form name="login" action="login.php" method="post">
