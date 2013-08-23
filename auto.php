@@ -48,7 +48,7 @@
 
     //--There is a bug that keeps the logout in a loop if userurl is http%3a%2f%2f1.0.0.0 ---/
     //--We need to remove this and replace it with something we want
-    $userurl = $default_site;
+    //$userurl = $default_site;
     if (preg_match("/1\.0\.0\.0/i", $userurl)) {
         $pattern = "/1\.0\.0\.0/i";
         $userurl = preg_replace($pattern, $default_site, $userurl);
@@ -231,7 +231,7 @@ if (window.matchMedia('(min-width: 769px)').matches) {
                 <input type="hidden" name="uamport" value="<? echo($uamport) ?>" />
 
                 <input type="hidden" name="challenge" value="<? echo($challenge) ?>" />
-                <input type="hidden" name="userurl" value="<? echo(urlencode($userurl)) ?>" />
+                <input type="hidden" name="userurl" value="<? echo(urlencode($default_site)) ?>" />
                 <input type="hidden" name="password" value="<? echo($json_array['voucher']['password']) ?>">
                 <input type="hidden" name="username" value="<? echo($json_array['voucher']['username']) ?>">
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
