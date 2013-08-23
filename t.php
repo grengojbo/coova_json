@@ -1,12 +1,12 @@
 <?
-  
+  /*
   ini_set('error_reporting', E_ALL);
   error_reporting(E_ALL);
   ini_set('log_errors',TRUE);
   ini_set('html_errors',FALSE);
   ini_set('error_log','/var/log/chilli.log');
   ini_set('display_errors',FALSE);
-  
+  */
 	$challenge = $_REQUEST['challenge'];
 	$userurl   = $_REQUEST['userurl'];
 	$res	   = $_REQUEST['res'];
@@ -31,7 +31,8 @@
     $gen_voucher = $hotspot_portal."/c2/yfi_cake/third_parties/json_create_voucher/?".
                     "key=".$key.'&voucher_value='.$value.'&profile='.urlencode($profile).'&realm='.urlencode($realm);
                     #"key=".$key.'&voucher_value='.$value.'&profile='.urlencode($profile).'&expires='.$expires.'&precede='.$precede.'&realm='.urlencode($realm);
-    error_log(print_r('"wget -q -O - '".$gen_voucher."'"', TRUE));
+    //error_log(print_r("wget -q -O - '".$gen_voucher."'", TRUE));
+    print_r("wget -q -O - '".$gen_voucher."'");
     $fb = exec("wget -q -O - '".$gen_voucher."'");
     //--- Sanitize the feedback a bit ------
     $fb = preg_replace("/^\(/","",$fb);
