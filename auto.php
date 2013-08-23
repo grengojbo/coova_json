@@ -115,14 +115,14 @@
 <script>
 
 function submitInternet(){
-    document.forms[0].buttonClicked.value = 4;
-    document.forms[0].submit();
+    document.forms['login'].buttonClicked.value = 4;
+    document.forms['login'].submit();
 }
 
 function submitADS(){
-    document.forms[0].userurl.value = "<? echo(urlencode($userurl)) ?>";
-    document.forms[0].buttonClicked.value = 4;
-    document.forms[0].submit();
+    document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";
+    document.forms['adlogin'].buttonClicked.value = 4;
+    document.forms['adlogin'].submit();
 }
 
 function submitAction(){
@@ -138,12 +138,12 @@ function submitAction(){
                 redirectUrl += urlStr;
                 if(redirectUrl.length > 255)
                     redirectUrl = redirectUrl.substring(0,255);
-                document.forms[0].redirect_url.value = redirectUrl;
+                document.forms['login'].redirect_url.value = redirectUrl;
             }
       }
 
-      document.forms[0].buttonClicked.value = 4;
-      document.forms[0].submit();
+      document.forms['login'].buttonClicked.value = 4;
+      document.forms['login'].submit();
 }
 
 function loadAction(){
@@ -160,7 +160,7 @@ function loadAction(){
       }
       //alert( "AP MAC Address is " + args.ap_mac);
       //alert( "The Switch URL is " + args.switch_url);
-      document.forms[0].action = args.switch_url;
+      document.forms['login'].action = args.switch_url;
 
       // This is the status code returned from webauth login action
       // Any value of status code from 1 to 5 is error condition and user
