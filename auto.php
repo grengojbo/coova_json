@@ -205,15 +205,15 @@ function loadAction(){
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
 <div class="pure-u-1 visible-phone" id="main-phone">
 <script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
-  <a onclick="submitADS();"><img src="static/img/bbm320x350.gif"></a>
+  <INPUT TYPE="image" SRC="static/img/bbm320x350.gif" WIDTH="320"  HEIGHT="350" BORDER="0" ALT="SUBMIT!">
 </div>
 <div class="pure-u-1 visible-tablet" id="main-tablet">
 <script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
-  <a onclick="submitADS();"><img src="static/img/bbm768x840.jpg"></a>
+<INPUT TYPE="image" SRC="static/img/bbm768x840.jpg" WIDTH="768"  HEIGHT="840" BORDER="0" ALT="SUBMIT!">
 </div>
 <div class="pure-u-1 visible-desktop" id="main-desktop">
 <script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
-<a onclick="submitADS();"><img src="static/img/bbm960x450.jpg"></a>
+<INPUT TYPE="image" SRC="static/img/bbm960x450.jpg" WIDTH="960"  HEIGHT="450" BORDER="0" ALT="SUBMIT!">
 </div>
 </form>
 <form name="login" action="login.php" method="post">
