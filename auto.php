@@ -186,7 +186,7 @@ function loadAction(){
 </script>
 </head>
 <body topmargin="50" marginheight="50">
-<form name="login" action="login.php" method="post">
+<form name="adlogin" action="login.php" method="post">
 
     <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
     <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
@@ -211,40 +211,26 @@ function loadAction(){
   <a onclick="submitADS();"><img src="static/img/bbm768x840.jpg"></a>
 </div>
 <div class="pure-u-1 visible-desktop" id="main-desktop">
-  <a onclick="submitADS();"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="960" height="450" id="960x450_BBMedia" align="middle">
-                                <param name="movie" value="static/flash/bbm960x450.swf" />
-                                <param name="quality" value="high" />
-                                <param name="bgcolor" value="#ffffff" />
-                                <param name="play" value="true" />
-                                <param name="loop" value="true" />
-                                <param name="wmode" value="window" />
-                                <param name="scale" value="showall" />
-                                <param name="menu" value="true" />
-                                <param name="devicefont" value="false" />
-                                <param name="salign" value="" />
-                                <param name="allowScriptAccess" value="sameDomain" />
-                                <!--[if !IE]>-->
-                                <object type="application/x-shockwave-flash" data="static/flash/bbm960x450.swf" width="960" height="450">
-                                        <param name="movie" value="static/flash/bbm960x450.swf" />
-                                        <param name="quality" value="high" />
-                                        <param name="bgcolor" value="#ffffff" />
-                                        <param name="play" value="true" />
-                                        <param name="loop" value="true" />
-                                        <param name="wmode" value="window" />
-                                        <param name="scale" value="showall" />
-                                        <param name="menu" value="true" />
-                                        <param name="devicefont" value="false" />
-                                        <param name="salign" value="" />
-                                        <param name="allowScriptAccess" value="sameDomain" />
-                                <!--<![endif]-->
-                                        <a href="http://www.adobe.com/go/getflash">
-                                                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
-                                        </a>
-                                <!--[if !IE]>-->
-                                </object>
-                                <!--<![endif]-->
-                        </object></a>
+<a onclick="submitADS();"><img src="static/img/bbm960x450.jpg"></a>
 </div>
+</form>
+<form name="login" action="login.php" method="post">
+
+    <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
+    <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
+    <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">
+    <input TYPE="hidden" NAME="info_flag" SIZE="16" MAXLENGTH="15" value="0">
+    <input TYPE="hidden" NAME="info_msg" SIZE="32" MAXLENGTH="31" value="0">
+
+    <input type="hidden" name="uamip" value="<? echo($uamip) ?>" />
+                <input type="hidden" name="uamport" value="<? echo($uamport) ?>" />
+
+                <input type="hidden" name="challenge" value="<? echo($challenge) ?>" />
+                <input type="hidden" name="userurl" value="<? echo(urlencode($userurl)) ?>" />
+                <input type="hidden" name="password" value="<? echo($json_array['voucher']['password']) ?>">
+                <input type="hidden" name="username" value="<? echo($json_array['voucher']['username']) ?>">
+                <!-- <input type="checkbox" name="remember" value="remember" /> -->
+
 <div class="pure-u-1"><div  id="footer"><button class="pure-button pure-input-1-1 pure-button-primary" onclick="submitInternet();">Internet</button></div></div>
 </div>
 </form>
