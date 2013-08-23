@@ -196,12 +196,12 @@ function loadAction(){
     <input TYPE="hidden" NAME="info_msg" SIZE="32" MAXLENGTH="31" value="0">
 
     <input type="hidden" name="uamip" value="<? echo($uamip) ?>" />
-                <input type="hidden" name="uamport" value="<? echo($uamport) ?>" />
+    <input type="hidden" name="uamport" value="<? echo($uamport) ?>" />
 
-                <input type="hidden" name="challenge" value="<? echo($challenge) ?>" />
-                <input type="hidden" name="userurl" value="<? echo(urlencode($userurl)) ?>" />
-                <input type="hidden" name="password" value="<? echo($json_array['voucher']['password']) ?>">
-                <input type="hidden" name="username" value="<? echo($json_array['voucher']['username']) ?>">
+    <input type="hidden" name="challenge" value="<? echo($challenge) ?>" />
+    <input type="hidden" name="userurl" value="<? echo(urlencode($userurl)) ?>" />
+    <input type="hidden" name="password" value="<? echo($json_array['voucher']['password']) ?>">
+    <input type="hidden" name="username" value="<? echo($json_array['voucher']['username']) ?>">
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
 <div class="pure-u-1 visible-phone" id="main-phone">
 <script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
