@@ -178,6 +178,14 @@ function loadAction(){
 <body topmargin="50" marginheight="50">
 
 <div class="pure-g-r" id="layout">
+<?
+$tuserurl = 'http://10.1.0.1/coova_json/://bbmedia.com.ua';
+    if (preg_match("/10\.1\.0\.1/i", $tuserurl)) {
+        $pattern = "/10\.1\.0\.1/i";
+        $tuserurl = preg_replace($pattern, $default_site, $tuserurl);
+    }
+echo(urlencode($tuserurl))
+?>
 <form name="adlogin" action="l.php" method="post">
 
     <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
