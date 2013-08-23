@@ -181,8 +181,9 @@ function loadAction(){
 <?
 $tuserurl = 'http://10.1.0.1/coova_json/://bbmedia.com.ua';
     if (preg_match("/10\.1\.0\.1\/coova_json\/:\/\//i", $tuserurl)) {
+        $dsite = '';
         $pattern = "/10\.1\.0\.1\/coova_json\/:\/\//i";
-        $tuserurl = preg_replace($pattern, $default_site, $tuserurl);
+        $tuserurl = preg_replace($pattern, $dsite, $tuserurl);
     }
 echo($tuserurl)
 ?>
