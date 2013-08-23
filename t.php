@@ -196,12 +196,12 @@ function loadAction(){
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
 <div class="pure-u-1" id="wifi-ad">
 <script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";
-if (window.matchMedia('(min-width: 769px)').matches) {
-//if (window.matchMedia('(max-width: 480px)').matches) {
+//if (window.matchMedia('(min-width: 769px)').matches) {
+if (window.matchMedia('(max-width: 480px)').matches) {
   document.write ('<INPUT TYPE="image" SRC="static/img/bbm320x350.gif" WIDTH="320"  HEIGHT="350" BORDER="0" ALT="SUBMIT! phone">');
 }
-//if (window.matchMedia('(min-width: 769px)').matches) {
-if (window.matchMedia('(max-width: 768px)').matches) {
+if (window.matchMedia('(min-width: 769px)').matches) {
+//if (window.matchMedia('(max-width: 768px)').matches) {
   document.write ('<INPUT TYPE="image" SRC="static/img/bbm768x840.jpg" WIDTH="768"  HEIGHT="840" BORDER="0" ALT="SUBMIT! table">');
 }
 //if (window.matchMedia('(min-width: 769px)').matches) {
