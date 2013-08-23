@@ -176,6 +176,8 @@ function loadAction(){
 </script>
 </head>
 <body topmargin="50" marginheight="50">
+
+<div class="pure-g-r" id="layout">
 <form name="adlogin" action="login.php" method="post">
 
     <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
@@ -192,9 +194,6 @@ function loadAction(){
                 <input type="hidden" name="password" value="<? echo($json_array['voucher']['password']) ?>">
                 <input type="hidden" name="username" value="<? echo($json_array['voucher']['username']) ?>">
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
-
-<div class="pure-g-r" id="layout">
-<div class="pure-u-1 visible-phone" id="main-phone">
 <div class="pure-u-1" id="wifi-ad">
 <script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";
 if (window.matchMedia('(min-width: 769px)').matches) {
@@ -229,7 +228,7 @@ if (window.matchMedia('(max-width: 768px)').matches) {
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
 
 <div class="pure-u-1"><div  id="footer"><button class="pure-button pure-input-1-1 pure-button-primary" onclick="submitInternet();">Internet</button></div></div>
-</div>
 </form>
+</div>
 </body>
 </html>
