@@ -131,7 +131,7 @@ function submitInternet(){
 }
 
 function submitADS(){
-    document.forms[0].userurl.value = "<? echo(urlencode($userurl)) ?>";
+    //document.forms[0].userurl.value = "<? echo(urlencode($userurl)) ?>";
     document.forms[0].buttonClicked.value = 4;
     document.forms[0].submit();
 }
@@ -216,12 +216,15 @@ function loadAction(){
 
 <div class="pure-g-r" id="layout">
 <div class="pure-u-1 visible-phone" id="main-phone">
+<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
   <a onclick="submitADS();"><img src="static/img/bbm320x350.gif"></a>
 </div>
 <div class="pure-u-1 visible-tablet" id="main-tablet">
+<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
   <a onclick="submitADS();"><img src="static/img/bbm768x840.jpg"></a>
 </div>
 <div class="pure-u-1 visible-desktop" id="main-desktop">
+<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
 <a onclick="submitADS();"><img src="static/img/bbm960x450.jpg"></a>
 </div>
 </form>

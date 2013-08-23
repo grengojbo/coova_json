@@ -120,7 +120,7 @@ function submitInternet(){
 }
 
 function submitADS(){
-    document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";
+    //document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";
     document.forms['adlogin'].buttonClicked.value = 4;
     document.forms['adlogin'].submit();
 }
@@ -204,12 +204,15 @@ function loadAction(){
                 <input type="hidden" name="username" value="<? echo($json_array['voucher']['username']) ?>">
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
 <div class="pure-u-1 visible-phone" id="main-phone">
+<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
   <a onclick="submitADS();"><img src="static/img/bbm320x350.gif"></a>
 </div>
 <div class="pure-u-1 visible-tablet" id="main-tablet">
+<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
   <a onclick="submitADS();"><img src="static/img/bbm768x840.jpg"></a>
 </div>
 <div class="pure-u-1 visible-desktop" id="main-desktop">
+<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";</script>
 <a onclick="submitADS();"><img src="static/img/bbm960x450.jpg"></a>
 </div>
 </form>
