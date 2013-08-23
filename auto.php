@@ -79,7 +79,7 @@
 
         if(isset($_COOKIE['hs'])){
 
-                $dir        = '/logon';
+               /* $dir        = '/logon';
                 $userurl    = $_REQUEST['userurl'];
                 $redir      = urlencode($userurl);
 
@@ -89,17 +89,18 @@
                 $target     = "http://$uamip".':'.$uamport.$dir."?username=$username&password=$enc_pwd&userurl=$redir";
                 header("Location: $target");
                 print("\n</html>");
+                */
         }
     }
     //Function to do the encryption thing of the password
-    function return_new_pwd($pwd,$challenge,$uamsecret){
+    /*function return_new_pwd($pwd,$challenge,$uamsecret){
             $hex_chal   = pack('H32', $challenge);                  //Hex the challenge
             $newchal    = pack('H*', md5($hex_chal.$uamsecret));    //Add it to with $uamsecret (shared between chilli an this script)
             $response   = md5("\0" . $pwd . $newchal);              //md5 the lot
             $newpwd     = pack('a32', $pwd);                //pack again
             $password   = implode ('', unpack('H32', ($newpwd ^ $newchal))); //unpack again
             return $password;
-    }
+    }*/
 
     //-- End Cookie add on ------------
 
