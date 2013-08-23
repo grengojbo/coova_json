@@ -31,7 +31,7 @@
     $gen_voucher = $hotspot_portal."/c2/yfi_cake/third_parties/json_create_voucher/?".
                     "key=".$key.'&voucher_value='.$value.'&profile='.urlencode($profile).'&realm='.urlencode($realm);
                     #"key=".$key.'&voucher_value='.$value.'&profile='.urlencode($profile).'&expires='.$expires.'&precede='.$precede.'&realm='.urlencode($realm);
-    //error_log(print_r('"wget -q -O - '".$gen_voucher."'"', TRUE));
+    error_log(print_r('"wget -q -O - '".$gen_voucher."'"', TRUE));
     $fb = exec("wget -q -O - '".$gen_voucher."'");
     //--- Sanitize the feedback a bit ------
     $fb = preg_replace("/^\(/","",$fb);
