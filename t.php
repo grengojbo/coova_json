@@ -136,27 +136,6 @@ function submitADS(){
     document.forms['adlogin'].submit();
 }
 
-function submitAction(){
-      var link = document.location.href;
-      var searchString = "redirect=";
-      var equalIndex = link.indexOf(searchString);
-      var redirectUrl = "";
-      var urlStr = "";
-      if(equalIndex > 0) {
-            equalIndex += searchString.length;
-            urlStr = link.substring(equalIndex);
-            if(urlStr.length > 0){
-                redirectUrl += urlStr;
-                if(redirectUrl.length > 255)
-                    redirectUrl = redirectUrl.substring(0,255);
-                document.forms['login'].redirect_url.value = redirectUrl;
-            }
-      }
-
-      document.forms['login'].buttonClicked.value = 4;
-      document.forms['login'].submit();
-}
-
 function loadAction(){
       var url = window.location.href;
       var args = new Object();
