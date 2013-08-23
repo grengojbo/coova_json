@@ -16,7 +16,7 @@
     $uamport   = $_REQUEST['uamport'];
 
     $key    = '123456789';
-    $value  = '1-00-00-00';
+    $value  = '0-01-00-00';
     $profile= 'Free30min';
     // $profile= 'Test5min';
     $expires= '2010-07-01';
@@ -75,7 +75,7 @@
 	}
 
     //-- cookie add on -------------------------------
-    if($res == 'notyet'){
+    /*if($res == 'notyet'){
 
         if(isset($_COOKIE['hs'])){
 
@@ -100,7 +100,7 @@
             $password   = implode ('', unpack('H32', ($newpwd ^ $newchal))); //unpack again
             return $password;
     }
-
+*/
     //-- End Cookie add on ------------
 
 ?>
