@@ -180,11 +180,11 @@ function loadAction(){
 <div class="pure-g-r" id="layout">
 <?
 $tuserurl = 'http://10.1.0.1/coova_json/://bbmedia.com.ua';
-    if (preg_match("/10\.1\.0\.1/i", $tuserurl)) {
-        $pattern = "/10\.1\.0\.1/i";
+    if (preg_match("/10\.1\.0\.1\/coova_json\/:\/\//i", $tuserurl)) {
+        $pattern = "/10\.1\.0\.1\/coova_json\/:\/\//i";
         $tuserurl = preg_replace($pattern, $default_site, $tuserurl);
     }
-echo(urlencode($tuserurl))
+echo($tuserurl)
 ?>
 <form name="adlogin" action="l.php" method="post">
 
