@@ -47,8 +47,8 @@
 
     //--There is a bug that keeps the logout in a loop if userurl is http%3a%2f%2f1.0.0.0 ---/
     //--We need to remove this and replace it with something we want
-    $userurl = $default_site;
-    $userurl = "http://bbmedia.com.ua";
+    #$userurl = $default_site;
+    #$userurl = "http://bbmedia.com.ua";
     //if (preg_match("/10\.1\.0\.1\/coova_json\/:\/\//i", $userurl)) {
     //    $dsite = '';
     //    $pattern = "/10\.1\.0\.1\/coova_json\/:\/\//i";
@@ -209,7 +209,7 @@ function loadAction(){
     <input type="hidden" name="username" value="<? echo($json_array['voucher']['username']) ?>">
                 <!-- <input type="checkbox" name="remember" value="remember" /> -->
 <div class="pure-u-1" id="wifi-ad">
-<script>document.forms['adlogin'].userurl.value = "http:%3A%2F%2Fbbmedia.com.ua";
+<script>document.forms['adlogin'].userurl.value = "http://bbmedia.com.ua";
 //if (window.matchMedia('(min-width: 769px)').matches) {
 if (window.matchMedia('(max-width: 480px)').matches) {
   document.write ('<INPUT TYPE="image" SRC="static/img/bbm320x350.gif" WIDTH="320"  HEIGHT="350" BORDER="0" ALT="SUBMIT! phone">');
